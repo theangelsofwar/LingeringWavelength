@@ -1,5 +1,6 @@
 require('isomorphic-fetch');
 const dotenv = require('dotenv');
+dotenv.config();
 const Koa = require('koa');
 const next = require('next');
 const { default: createShopifyAuth } = require('@shopify/koa-shopify-auth');
@@ -7,7 +8,6 @@ const { verifyRequest } = require('@shopify/koa-shopify-auth');
 const session = require('koa-session');
 const { default: Server } = require('next/dist/next-server/server/next-server');
 
-dotenv.config();
 
 const port = parseInt(process.env.PORT, 10 || 3000);
 const dev = process.send.NODE_ENV !== 'production';
@@ -40,18 +40,9 @@ app.prepare().then(() => {
     await handle(ctx.req, ctx.res);
     ctx.respond = false;
     ctx.res.statusCode = 200;
-    return;
   });
 
   server.listen(port, () => {
-    console.log(`> Ready on http://localhost:${post}`);
+    console.log(`> Ready on http://localhost:${port}`);
   });
 });
-// var express = require('express');
-
-// var app = express();
-
-// var server = require('http').Server(app);
-// app.use(express.static('.'));
-
-// server.listen(8000);
