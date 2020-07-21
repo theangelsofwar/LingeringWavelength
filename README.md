@@ -15,8 +15,11 @@ Deps: npm install --save/-g
 
 
 Secure Tunnel:
-- npm install ngrok -g
+- npm i -g ngrok
 - ngrok http 3000
 
-- brew cask install ngrok
+
+koa server
+- npm install --save koa @shopify/koa-shopify-auth dotenv koa-session isomorphic-fetch
+
 
