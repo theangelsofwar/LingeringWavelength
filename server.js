@@ -5,6 +5,7 @@ const next = require('next');
 const { default: createShopifyAuth } = require('@shopify/koa-shopify-auth');
 const { verifyRequest } = require('@shopify/koa-shopify-auth');
 const session = require('koa-session');
+const { default: Server } = require('next/dist/next-server/server/next-server');
 
 dotenv.config();
 
@@ -41,7 +42,10 @@ app.prepare().then(() => {
     ctx.res.statusCode = 200;
     return;
   });
-  
+
+  server.listen(port, () => {
+    console.log(`> Ready on http://localhost:${post}`);
+  });
 });
 // var express = require('express');
 
