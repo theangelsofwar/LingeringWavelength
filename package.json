@@ -7,7 +7,7 @@
     "@shopify/koa-shopify-auth": "^3.1.65",
     "@shopify/koa-shopify-graphql-proxy": "^4.0.1",
     "@shopify/koa-shopify-webhooks": "^2.4.3",
-    "@shopify/polaris": "^5.0.0",
+    "@shopify/polaris": "^5.1.0",
     "@zeit/next-css": "^1.0.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
