@@ -5,7 +5,8 @@ import {
     FormLayout, 
     Layout, 
     Page, 
-    SettingToggle, 
+    SettingToggle,
+    TextStyle, 
     Stack, 
     TextField 
 } from '@shopify/polaris';
